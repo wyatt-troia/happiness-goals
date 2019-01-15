@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <div class="row pb-4">
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top img-fluid" src="{{url_for('static', filename='asanas.jpg')}}" alt="exercise_image">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Physical Health</h5>
+            <p class="card-text">Take care of your body</p>
+            <a href="#" value="physical_health" class="btn btn-primary mt-auto category_btn">Set a Goal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top img-fluid" src="{{url_for('static', filename='thanks2.jpg')}}" alt="gratitude_image">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Gratitude</h5>
+            <p class="card-text">Count your blessings</p>
+            <a href="#" value="gratitude" class="btn btn-primary mt-auto category_btn">Set a Goal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top img-fluid" src="{{url_for('static', filename='friends2.jpg')}}" alt="relationships_image" >
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Relationships</h5>
+            <p class="card-text">Feel the love</p>
+            <a href="#" value="relationships" class="btn btn-primary mt-auto category_btn">Set a Goal</a>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <div class="row pb-4">
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top img-fluid" src="{{url_for('static', filename='volunteer2.jpg')}}" alt="giving_back_image" >
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Giving Back</h5>
+            <p class="card-text">Help others and feel useful</p>
+            <a href="#" value="service" class="btn btn-primary mt-auto category_btn">Set a Goal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top img-fluid" src="{{url_for('static', filename='spirituality2.jpg')}}" alt="spirituality_image" >
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Spirituality</h5>
+            <p class="card-text">Connect to something larger than yourself</p>
+            <a href="#" value="spirituality" class="btn btn-primary mt-auto category_btn">Set a Goal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top img-fluid" src="{{url_for('static', filename='old2.jpg')}}" alt="other_image" >
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Other</h5>
+            <p class="card-text">You know you best! What do you think will make you happy?</p>
+            <a href="#" value="other" class="btn btn-primary mt-auto category_btn">Set a Goal</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="goal_cards">
+
+    </div>
+
+{% endblock %}

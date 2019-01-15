@@ -1,0 +1,65 @@
+main .form-group
+{
+    /*center form inputs */
+    float: none;
+    margin: 0 auto;
+
+}
+
+main
+{
+    /* center contents */
+    text-align:center;
+}
+
+.card
+{
+    height: 100%;
+}
+
+.freq_select
+{
+    width: 50%;
+}
+
+.datepicker table tr td span.active{
+    background: #04c!important;
+    border-color: #04c!important;
+}
+.datepicker .datepicker-days tr td.active {
+    background: #04c!important;
+}
+#week-picker-wrapper .datepicker .datepicker-days tr td.active~td, #week-picker-wrapper .datepicker .datepicker-days tr td.active {
+    color: #fff;
+    background-color: #04c;
+    border-radius: 0;
+}
+
+#week-picker-wrapper .datepicker .datepicker-days tr:hover td, #week-picker-wrapper .datepicker table tr td.day:hover, #week-picker-wrapper .datepicker table tr td.focused {
+    color: #000!important;
+    background: #e5e2e3!important;
+    border-radius: 0!important;
+}
+
+.errors
+{
+    color:red;
+    list-style-type: none;
+}
+
+td.yes {
+  background-color: green;
+}
+td.no {
+  background-color: red;
+}
+
+
+
+
+
+
+
+
+
+

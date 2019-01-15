@@ -1,0 +1,34 @@
+                <div class="row mb-3" id="back_to_track_div">
+                    <div class="col-md-4 offset-md-4">
+                        <a href="#" id="back_to_track_btn" class="btn btn-primary btn-lg btn-block mt-auto">Back</a>
+                    </div>
+                </div>
+                <h1 class="mb-2">
+                    Goal: {{ goal_name }}
+                </h1>
+                <h3 class="mb-3">
+                    Achievement rate: {{ "{0:.0%}".format(goal_achievement_rate) }}
+                </h3>
+                <h4>
+                    History
+                </h4>
+                <table class="table table-striped mt-1" id="goal_history_table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Week Starting</th>
+                        <th scope="col">Target</th>
+                        <th scope="col">Actual</th>
+                        <th scope="col">Achieved</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for goal_history_row in goal_history_rows %}
+                        <tr>
+                            <td scope="row" style="font-weight:normal;">{{ goal_history_row["week_starting"] }}</th>
+                            <td style="font-weight:normal;">{{ goal_history_row["target"] }}</th>
+                            <td style="font-weight:normal;">{{ goal_history_row["actual"] }}</th>
+                            <td style="font-weight:normal;">{{ goal_history_row["achievement"] }}</th>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>

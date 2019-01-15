@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    {% if goals %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 goal_history_hide">
+                <a href="#" id="checkin_btn" class="btn btn-primary btn-lg btn-block mt-auto">Weekly Check-In</a>
+            </div>
+        </div>
+        <div class="row mt-4 goal_history_hide">
+            <div class="col-md-12" id="checkin_form_div">
+            </div>
+        </div>
+        <div class="row mb-3 goal_history_hide">
+            <div class="col">
+                <h2>
+                Overall Goal Achievement: {{ "{0:.0%}".format(overall_achievement) }}
+                </h2>
+            </div>
+
+        </div>
+
+        <div class="row goal_history_hide">
+            <div class="col-md-8 offset-md-2">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                        <th scope="col">Goal</th>
+                        <th scope="col">Achievement Rate</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for goal, rate in goals.items() %}
+                        <tr>
+                            <td scope="row"><a class="goal_history" href='#'>{{ goal }}</a></th>
+                            <td>{{ "{0:.0%}".format(rate) }}</th>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 offset-md-2" id="goal_history_div">
+
+            </div>
+            <iframe src={{ graph_url }}
+                    height="600" width="100%"
+                    scrolling="no" seamless="seamless"
+                    frameBorder="0">
+            </iframe>
+        </div>
+
+    </div>
+
+    {% endif %}
+{% endblock %}
