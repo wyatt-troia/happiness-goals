@@ -8,15 +8,6 @@ Goal performance is visualized using [Plotly](https://plot.ly/).
 
 ![Demo](https://imgur.com/8KjHrd0.gif)
 
-## Getting Started
-
-Start a SQLite server.
-
-```
-flask run
-```
-
-
 ## Author
 
 - **Wyatt Troia** - [Github](https://github.com/wyatt-troia)
